@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: flex-end; /* move tudo pra direita */
+  background: #1c2632;
+  color: white;
+  height: 100vh; /* ocupa a tela toda */
+  margin: 0;
+  align-items: center; /* opcional: centraliza verticalmente */
+}
+
+.container {
+  width: 400px;      /* tamanho da caixa */
+  background: #2a3b4d;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+p {
+    color: white;
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+}
+li{
+    color: white;
+}
+h3{
+    color: white;
+}
