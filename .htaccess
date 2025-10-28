@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # --- Bloco de Regra para LOCALHOST ---
+    # Se o Host for "localhost"
+    RewriteCond %{HTTP_HOST} ^localhost$
+    # E o arquivo ou pasta não existir
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Reescreve para /colae/index.php (o caminho do seu XAMPP)
+    RewriteRule . /kolae/index.php [L]
+
+    # --- Bloco de Regra para PRODUÇÃO ---
+    # Se o Host NÃO for "localhost" (ex: colae.42web.io)
+    RewriteCond %{HTTP_HOST} !^localhost$
+    # E o arquivo ou pasta não existir
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # Reescreve para /index.php (o caminho da raiz no InfinityFree)
+    RewriteRule . /index.php [L]
+</IfModule>
