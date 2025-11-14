@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolae - Login do Protótipo</title>
+    <!-- Google Fonts (do seu site original) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS (do seu site original) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* Classe para esconder elementos */
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0D1117] text-white">
+    <div class="flex min-h-screen">
+      <!-- Seção da Imagem (Esquerda) -->
+      <div
+        class="hidden lg:flex w-1/2 bg-cover bg-center relative items-center justify-center"
+        style="
+          background-image: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+        "
+      >
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 text-center px-12">
+          <!-- 
+                  IMPORTANTE: Copie a pasta 'assets' do seu projeto 'kolae' original 
+                  para dentro de 'kolae_app_web' para o logo aparecer.
+                  [cite: `slengm4n/kolae/kolae-f963b8caf4b3df3a1c05e5e87dfd49e7d973aaad/assets/img/kolae_branca.png`]
+                -->
+          <img
+            src="./assets/img/kolae_branca.png"
+            alt="Logo Kolae"
+            class="h-16 mx-auto mb-6"
+            onerror="this.style.display='none'"
+          />
+          <h1 class="text-4xl font-bold leading-tight">
+            Sua jornada esportiva começa aqui.
+          </h1>
+          <p class="mt-4 text-lg text-gray-300">
+            Conecte-se, treine e evolua com a maior comunidade de atletas.
+          </p>
+        </div>
+      </div>
+
+      <!-- Seção do Formulário (Direita) -->
+      <div class="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-8">
+        <div
+          class="relative w-full max-w-md bg-[#161B22] p-8 rounded-2xl border border-gray-800 lg:border-none lg:bg-transparent lg:p-0"
+        >
+          <h2 class="text-3xl font-bold text-center mb-2">
+            Bem-vindo ao Protótipo!
+          </h2>
+          <p class="text-gray-400 text-center mb-8">
+            Acesse com sua conta Kolae.
+          </p>
+
+          <!-- Bloco para exibir mensagens de erro (controlado pelo JS) -->
+          <div
+            id="error-message"
+            class="bg-red-500/20 border border-red-500 text-red-300 px-4 py-3 rounded-lg text-center mb-6 text-sm hidden"
+          >
+            <!-- Mensagem de erro aparecerá aqui -->
+          </div>
+
+          <!-- Formulário de Login (sem 'action' ou 'method') -->
+          <form id="login-form" class="space-y-6">
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300"
+                >Email</label
+              >
+              <div class="mt-1">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                for="password"
+                class="block text-sm font-medium text-gray-300"
+                >Senha</label
+              >
+              <div class="mt-1">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  autocomplete="current-password"
+                  required
+                  class="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                />
+              </div>
+            </div>
+            <div>
+              <button
+                type="submit"
+                id="login-button"
+                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-bold text-black bg-cyan-400 hover:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900 focus:ring-cyan-400 transition-colors"
+              >
+                Entrar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Link para o JavaScript -->
+    <script src="login.js" defer></script>
+  </body>
+</html>
