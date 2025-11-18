@@ -1,76 +1,127 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="https://i.postimg.cc/Ss21pvVJ/Favicon.png" type="image/png">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/assets/Styles/styles.css">
-        <title>Kolae</title>
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h1>Quadra do Xuxa</h1>
-                <img id="imagem-quadra" src="/assets/img/Quadra do xuxa.jpeg" alt="">
-            </div>
-            <div class="fundo">
-                <div class="avaliacao">
-                    <img class="estrelas" src="/Assets/Img/Estrelas.png" alt="">
-                    <p><span id="nota">4,7</span><span>67 Avaliações</span></p>
-                </div>
-                <div class="container-perfil">
-                    <h2>Dono da quadra</h2>
-                    <div class="perfil">
-                        <img src="/assets/Img/Dono da quadra.jpeg" alt="">
-                        <p><span class="nome">Eduardo</span><br><span class="tempo">1 Ano de kolae</span></p>
-                    </div>
-                </div>
-                <div class="linha"></div>
-                <div>
-                    <h2>Esportes práticados</h2>
-                    <div>
-                        <ul>
-                            <li>Futebol</li>
-                        </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://i.postimg.cc/Ss21pvVJ/Favicon.png" type="image/png">
+    <title>Kolae</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#181C24',
+                        'light-bg': '#202C34',
+                        'kolae-blue': '#0788DE',
+                        'kolae-hover': '#1d9eef',
+                    },
+                    boxShadow: {
+                        'custom-strong': '0 10px 14px rgba(0, 0, 0, 1)',
+                        'bar-shadow': '0 -3px 10px rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+</head>
 
-                    </div>
+<body class="flex justify-end bg-white min-h-screen m-0 text-white">
+
+    <div class="w-[400px] bg-dark-bg min-h-screen pb-24 relative shadow-2xl">
+        
+        <div class="pt-4">
+            <h1 class="text-white text-center text-2xl font-bold mb-4">Quadra do Xuxa</h1>
+            <img id="imagem-quadra" src="/assets/img/Quadra do xuxa.jpeg" alt="Quadra" 
+                 class="w-[80%] mx-auto mb-5 rounded-[20px] border-2 border-white block">
+        </div>
+
+        <div class="bg-light-bg rounded-[20px] pb-5 mx-2 mb-2">
+            
+            <div class="text-center text-lg pt-4 flex flex-col items-center">
+                <img class="w-[70%] mt-5" src="/Assets/Img/Estrelas.png" alt="Estrelas">
+                <p class="mt-2 w-full flex justify-center gap-8 pr-8">
+                    <span id="nota" class="mr-[15px]">4,7</span>
+                    <span>67 Avaliações</span>
+                </p>
+            </div>
+
+            <div class="container-perfil bg-dark-bg rounded-[20px] text-center m-2.5 h-[170px] p-1 shadow-custom-strong">
+                <h2 class="text-white text-center text-xl font-bold mt-4 mb-4">Dono da quadra</h2>
+                <div class="flex items-center justify-center gap-5">
+                    <img src="/assets/Img/Dono da quadra.jpeg" alt="Dono" 
+                         class="w-20 h-20 rounded-full object-cover border-2 border-white">
+                    <p class="text-left">
+                        <span class="text-base font-bold">Eduardo</span><br>
+                        <span class="text-gray-400">1 Ano de kolae</span>
+                    </p>
                 </div>
-                <div class="linha"></div>
+            </div>
+
+            <div class="h-[2px] bg-white w-[80%] mx-auto my-5 rounded-[1px]"></div>
+
+            <div>
+                <h2 class="text-white text-center text-xl font-bold mb-2">Esportes práticados</h2>
                 <div>
-                    <h2>Áreas de lazer</h2>
-                    <div>
-                        <ul>
-                            <li>Churrasqueira</li>
-                            <li>Bar</li>
-                        </ul>
+                    <ul class="list-disc ml-12 text-white">
+                        <li>Futebol</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h-[2px] bg-white w-[80%] mx-auto my-5 rounded-[1px]"></div>
+
+            <div>
+                <h2 class="text-white text-center text-xl font-bold mb-2">Áreas de lazer</h2>
+                <div>
+                    <ul class="list-disc ml-12 text-white">
+                        <li>Churrasqueira</li>
+                        <li>Bar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="h-[2px] bg-white w-[80%] mx-auto my-5 rounded-[1px]"></div>
+
+            <div class="bg-dark-bg rounded-[20px] h-[200px] m-2.5 shadow-custom-strong flex flex-col">
+                <div class="flex items-center gap-[15px] p-[15px]">
+                    <img id="perfil-imagem" src="/assets/Img/Guilherme.png" alt="Foto do usuário" 
+                         class="w-20 h-20 rounded-full object-cover border-2 border-white shrink-0">
+                    
+                    <div class="flex flex-col w-full">
+                        <p class="font-bold text-base mb-1">Guilherme Schumacher</p>
+                        <img id="estrelas-coment" src="/Assets/Img/Estrelas (5).png" alt="5 estrelas" class="w-[40%]">
                     </div>
                 </div>
-                <div class="linha"></div>
-                <div class="comentario">
-                    <div class="perfil-comentarios">
-                        
-                        <img id="perfil-imagem" src="/assets/Img/Guilherme.png" alt="Foto do usuário">
-                        <p class="nome">Guilherme Schumacher</p>
-                        <img id="estrelas-coment" src="/Assets/Img/Estrelas (5).png" alt="">
-                    </div>
-                <p class="texto-comentario">
+                <p class="text-center text-base px-4 mt-[-10px]">
                     Gostei muito da quadra, voltarei mais vezes!
                 </p>
-                </div>
-                <button class="btn">Mostrar todos os comentários</button>
-            </div>   
-        </div>  
-        <div class="barra-inferior">
-            <div class="info">
-                <p><span id="valor">R$28</span></p>
-                <p><strong>Número de vagas: 2</strong></p>
-                <p><Strong>Horário: 18:00 - 20:00</Strong></p>
             </div>
-            <div>
-                <button class="button-iniciar">Iniciar Partida</button>
+
+            <div class="flex justify-center w-full">
+                <button class="bg-[#9b9b9b] hover:bg-kolae-blue hover:shadow-lg text-white font-bold py-2 px-4 rounded-[5px] w-[55%] cursor-pointer transition duration-300 mb-5 border-none">
+                    Mostrar todos os comentários
+                </button>
             </div>
-        </div> 
-        
-    </body>
-    </html>
+        </div>    
+    </div>  
+
+    <div class="fixed bottom-0 right-0 w-[400px] bg-dark-bg flex justify-between items-center px-5 py-2.5 shadow-bar-shadow z-10 h-[120px] border-t border-gray-700/30">
+        <div class="info mt-[5px] text-sm text-white">
+            <p><span id="valor" class="text-kolae-blue font-bold text-2xl ml-[10px]">R$28</span></p>
+            <p class="mt-1"><strong>Número de vagas: 2</strong></p>
+            <p><strong>Horário: 18:00 - 20:00</strong></p>
+        </div>
+        <div>
+            <button class="bg-kolae-blue hover:bg-kolae-hover hover:shadow-lg text-white font-bold h-[30px] px-4 rounded-[20px] border-none cursor-pointer transition duration-300 mr-[10px]">
+                Iniciar Partida
+            </button>
+        </div>
+    </div> 
+
+</body>
+</html>
