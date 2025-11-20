@@ -139,7 +139,7 @@
         <!-- Sidebar de Informações da Quadra (Inspirada no seu exemplo) -->
         <div
           id="venue-sidebar"
-          class="absolute top-0 right-0 h-full w-full sm:max-w-sm bg-[#161B22] shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full z-20 border-l border-gray-800 flex flex-col"
+          class="absolute top-0 right-0 h-full  w-full sm:max-w-sm bg-[#161B22] shadow-lg transform transition-transform duration-300 ease-in-out translate-x-full z-20 border-l border-gray-800 flex flex-col"
         >
           <button
             id="close-sidebar-btn"
@@ -167,7 +167,7 @@
 
             <div class="bg-[#202C34] rounded-[30px] mb-2 shadow-lg p-6 w-full">
 
-            <div class="flex items-center gap-4 p-4 rounded-[20px] bg[#161B22] mb-4">
+            <div class="flex items-center gap-4 p-4 rounded-[20px] mb-10 shadow-[0_0_20px_rgba(0,0,0,0.6)]">
                 <img
                     id='owner-image'
                     src="https://placehold.co/256x256/1f2937/9ca3af?text=Foto"
@@ -178,7 +178,10 @@
                     <h3 class="text-md font-semibold text-gray-300">Dono da Quadra</h3>
                     <p id='owner-name' class="text-lg font-bold text-white">Nome do Dono</p>
                 </div>
+                
             </div>
+
+            
 
             <div>
             <p id="venue-address" class="text-gray-400 mt-1 mb-4">
@@ -248,13 +251,13 @@
                   class="text-green-400 text-sm h-4"
                 ></p>
 
+
                 <button
-                  type="submit"
-                  id="create-game-button"
-                  class="w-full flex justify-center py-3 px-4 rounded-md text-sm font-bold text-black bg-cyan-400 hover:bg-cyan-300 transition-colors"
-                >
-                  Iniciar Partida
-                </button>
+                    type="submit"
+                    id="create-game-button"
+                    class="w-full flex justify-center py-3 px-4 rounded-md text-sm font-bold text-black bg-cyan-400 hover:bg-cyan-300 transition-colors">
+                    Iniciar Partida
+                  </button>
               </form>
             </div>
           </div>
