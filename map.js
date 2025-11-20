@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- URLs DA API (do seu projeto Kolae original) ---
-    const API_BASE_URL = 'http://localhost/colae/api/v1'; // Ajuste 'colae' se necessário
+    const API_BASE_URL = 'http://localhost/kolae/api/v1';
     const VENUES_URL = `${API_BASE_URL}/venues`;
     const SPORTS_URL = `${API_BASE_URL}/sports`;
     const GAMES_URL = `${API_BASE_URL}/games`; // Ou /matches, conforme você renomeou
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const createGameButton = document.getElementById('create-game-button');
     const hiddenVenueIdInput = document.getElementById('venue-id-hidden');
     const userNamePlaceholder = document.getElementById('user-name-placeholder');
+    
     
     // --- Variáveis Globais ---
     let map;
@@ -207,7 +208,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('venue-image').src = venue.full_image_url || 'https://placehold.co/400x200/161B22/E0E0E0?text=Sem+Imagem';
         document.getElementById('venue-name').textContent = venue.name;
         document.getElementById('venue-address').textContent = `${venue.street}, ${venue.number} - ${venue.city}`;
-        
+        document.getElementById('owner-image').src = venue.owner_image_url;
+        document.getElementById('owner-name').textContent = venue.owner_name;
+
         // ** Guarda o ID da quadra no input escondido do formulário **
         hiddenVenueIdInput.value = venue.id;
 

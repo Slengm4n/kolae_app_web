@@ -19,7 +19,24 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com">
+              tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#181C24',
+                        'light-bg': '#202C34',
+                        'kolae-blue': '#0788DE',
+                        'kolae-hover': '#1d9eef',
+                    },
+                    boxShadow: {
+                        'custom-strong': '0 10px 14px rgba(0, 0, 0, 1)',
+                        'bar-shadow': '0 -3px 10px rgba(0, 0, 0, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -48,7 +65,7 @@
       <!-- Sidebar de Navegação (Menu Principal) -->
       <aside
         id="sidebar"
-        class="fixed top-0 left-0 z-40 w-64 h-screen bg-[#161B22] border-r border-gray-800 flex flex-col transition-transform -translate-x-full md:translate-x-0"
+        class="fixed top-0 left-0 z-40 w-64 h-screen bg-[#181C24] border-r border-gray-800 flex flex-col transition-transform -translate-x-full md:translate-x-0"
       >
         <div class="p-6 text-center border-b border-gray-800">
           <div
@@ -134,23 +151,41 @@
           <!-- Conteúdo com Scroll -->
           <div
             id="venue-sidebar-content"
-            class="flex-grow p-6 pt-12 overflow-y-auto"
+            class="flex-grow  pt-12 overflow-y-auto"
           >
+
+            <h2 id="venue-name" class="text-3xl font-bold text-white text-center mb-2">
+              Selecione uma quadra
+            </h2>
+
             <img
               id="venue-image"
               src="https://placehold.co/400x200/161B22/E0E0E0?text=Kolae"
               alt="Foto do local"
-              class="w-full h-48 object-cover rounded-lg mb-4 bg-gray-800"
+              class="w-[70%] mx-auto h-48 object-cover rounded-[20px] border-2 border-white mb-5 max-w-full sm:max-w-sm "
             />
 
-            <h2 id="venue-name" class="text-3xl font-bold text-white">
-              Selecione uma quadra
-            </h2>
+            <div class="bg-[#202C34] rounded-[30px] mb-2 shadow-lg p-6 w-full">
+
+            <div class="flex items-center gap-4 p-4 rounded-[20px] bg[#161B22] mb-4">
+                <img
+                    id='owner-image'
+                    src="https://placehold.co/256x256/1f2937/9ca3af?text=Foto"
+                    alt="Foto do Dono"
+                    class="w-16 h-16 rounded-full object-cover border-2 border-kolae-blue"
+                />
+                <div>
+                    <h3 class="text-md font-semibold text-gray-300">Dono da Quadra</h3>
+                    <p id='owner-name' class="text-lg font-bold text-white">Nome do Dono</p>
+                </div>
+            </div>
+
+            <div>
             <p id="venue-address" class="text-gray-400 mt-1 mb-4">
               Clique em um pino no mapa...
             </p>
 
-            <div class="border-b border-gray-700 mb-4"></div>
+            <div class="border-b border-gray-700 mb-4"></div> <!-- LINHA -->
 
             <div>
               <h3 class="text-lg font-semibold mb-2">Comodidades</h3>
@@ -163,7 +198,7 @@
             </div>
 
             <div class="border-b border-gray-700 mt-4 mb-4"></div>
-
+            </div>
             <!-- Formulário para Criar Partida -->
             <div>
               <h2 class="text-2xl font-bold text-white mb-4">
@@ -204,6 +239,8 @@
                     class="w-full mt-1 bg-gray-800 border border-gray-700 rounded-md px-4 py-3 text-sm text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
                   />
                 </div>
+
+              </div>
 
                 <p id="game-error-message" class="text-red-400 text-sm h-4"></p>
                 <p

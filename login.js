@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuração ---
     // A URL da API do seu projeto Kolae ORIGINAL (que está rodando no XAMPP)
-    const LOGIN_API_URL = 'http://localhost/colae/api/v1/auth/login';
+    const LOGIN_API_URL = 'http://localhost/kolae/api/v1/auth/login';
     // O nome da chave para salvar o token no navegador
     const TOKEN_KEY = 'kolaeAuthToken';
     // A página para onde o usuário será enviado após o login
